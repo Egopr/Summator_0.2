@@ -103,14 +103,11 @@ def str_mas(list):
         str_list.append(str(i))
     return str_list
 
-
-mas = rasp_sum(40, 168000)
-drob = drob_num(40, 168000)
-
-print(mas)
-
-s = soedinenie(mas, drob)
-
-
+''' Возвращает автомотичски массив с максимальным размытием значни'''
+def auto_random_sum(num, summ):
+    react = summ/num
+    full = react/2
+    ars = random_summ(num, summ, 0, int(full))
+    return ars
 
 
