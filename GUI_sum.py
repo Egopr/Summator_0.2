@@ -8,8 +8,7 @@ ui.setWindowTitle('Summator')
 
 
 def get_num():
-    ui.num.selectAll()
-    num = ui.num.selectedText()
+    num = ui.num.displayText()
     num = int(num)
     ui.num.end(0)
     return num
@@ -42,7 +41,7 @@ def get_after():
 def check_sum():
     summ = round(get_sum()/get_num(), 2)
     ui.lable_control.clear()
-    ui.lable_control.setText('Pronto')
+    ui.lable_control.setText(summ)
     return summ #частное для контроля ручного режима размытия случайного порядка
 
 
@@ -63,6 +62,7 @@ def hand_rez():
 def write_list():
     ui.listWidget.clear()
     cur_row = ui.listWidget.currentRow()
+
     '''
     if
 
@@ -75,20 +75,37 @@ def write_list():
     for i in str_mas:
         ui.listWidget.insertItem(cur_row+1, i)
 
+    ui.info.setText('Completed')
 
 def clear_box():
     ui.listWidget.clear()
+    ui.info.setText('Clear')
 
 
 def ccc():
     ui.info.clear()
+    rb = ui.hand_radio.event('accept')
+    print(rb)
     ui.info.setText('Pronto')
 
 
-ui.pushButton.clicked.connect(write_list)
+def get():
+    num = ui.num.displayText()
+    if num != "":
+        num = int(num)
+        ui.num.end(0)
+    else:
+        ui.num_labe.setColor()
+        ui.info.setText('Error Write')
+    return num
+
+
+
+#ui.pushButton.clicked.connect(write_list)
 ui.clear.clicked.connect(clear_box)
-ui.num.createStandardContextMenu()
-#ui.pushButton.clicked.connect(get_num)
+#ui.num.createStandardContextMenu()
+ui.pushButton.clicked.connect(get)
+
 
 ui.show()
 app.exec()
