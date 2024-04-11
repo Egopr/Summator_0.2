@@ -15,24 +15,21 @@ def get_num():
 
 
 def get_sum():
-    ui.sum.selectAll()
-    sum = ui.sum.selectedText()
+    sum = ui.sum.displayText()
     sum = int(sum)
     ui.sum.end(0)
     return sum
 
 
 def get_before():
-    ui.before.selectAll()
-    before = ui.before.selectedText()
+    before = ui.before.displayText()
     before = int(before)
     ui.before.end(0)
     return before
 
 
 def get_after():
-    ui.after.selectAll()
-    after = ui.after.selectedText()
+    after = ui.after.displayText()
     after = int(after)
     ui.after.end(0)
     return after
@@ -40,8 +37,6 @@ def get_after():
 
 def check_sum():
     summ = round(get_sum()/get_num(), 2)
-    ui.lable_control.clear()
-    ui.lable_control.setText(summ)
     return summ #частное для контроля ручного режима размытия случайного порядка
 
 
@@ -69,7 +64,7 @@ def write_list():
         mass = auto_rez()
         mass = hand_rez()
     '''
-
+    ui.labe_control.setText(str(check_sum()))
     mass = fs.auto_random_sum(get_num(), get_sum())
     str_mas = fs.str_mas(mass)
     for i in str_mas:
@@ -84,7 +79,7 @@ def clear_box():
 
 def ccc():
     ui.info.clear()
-    rb = ui.hand_radio.event('accept')
+    rb = ui.hand_radio.event('Аccept')
     print(rb)
     ui.info.setText('Pronto')
 
@@ -95,16 +90,15 @@ def get():
         num = int(num)
         ui.num.end(0)
     else:
-        ui.num_labe.setColor()
         ui.info.setText('Error Write')
     return num
 
 
 
-#ui.pushButton.clicked.connect(write_list)
+ui.pushButton.clicked.connect(write_list)
 ui.clear.clicked.connect(clear_box)
 #ui.num.createStandardContextMenu()
-ui.pushButton.clicked.connect(get)
+#ui.pushButton.clicked.connect(get)
 
 
 ui.show()

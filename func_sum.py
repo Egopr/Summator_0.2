@@ -110,4 +110,6 @@ def auto_random_sum(num, summ):
     ars = random_summ(num, summ, 0, int(full))
     return ars
 
+#mas = auto_random_sum(120, 341600 )
 
+#print(mas)
