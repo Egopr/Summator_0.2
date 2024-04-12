@@ -57,6 +57,7 @@ def hand_rez():
     mas = fs.random_summ(get_num(), get_sum(), get_before(), get_after())
     return mas
 
+
 '''Устарела функция'''
 def write_list():
     ui.listWidget.clear()
