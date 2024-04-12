@@ -57,7 +57,7 @@ def hand_rez():
     mas = fs.random_summ(get_num(), get_sum(), get_before(), get_after())
     return mas
 
-
+'''Устарела функция'''
 def write_list():
     ui.listWidget.clear()
     cur_row = ui.listWidget.currentRow()
@@ -74,8 +74,17 @@ def write_list():
     ui.info.setText('Completed')
 
 
+def text_edit():
+    ui.textEdit.clear()
+    mass = fs.auto_random_sum(get_num(), get_sum())
+    str_mas = fs.str_mas(mass)
+    for i in str_mas:
+        ui.textEdit.append(i)
+    ui.info.setText('Completed')
+
+
 def clear_box():
-    ui.listWidget.clear()
+    ui.textEdit.clear()
     ui.info.setText('Clear')
 
 
@@ -87,16 +96,17 @@ def ccc():
 
 
 def main():
-
     if check_sum() > 0:
         ui.labe_control.setText(str(check_sum()))
-        write_list()
+        text_edit()
     else:
         ui.labe_control.setText("Error write")
 
 
+
 ui.pushButton.clicked.connect(main)
 ui.clear.clicked.connect(clear_box)
+
 #ui.num.createStandardContextMenu()
 #ui.pushButton.clicked.connect(get)
 
