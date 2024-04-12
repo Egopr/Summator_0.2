@@ -89,10 +89,16 @@ def clear_box():
 
 
 def ccc():
-    ui.info.clear()
-    rb = ui.hand_radio.event('Аccept')
-    print(rb)
-    ui.info.setText('Pronto')
+    bool_CB = ui.c_auto.stateChanged()
+    print(bool_CB)
+    print(type(bool_CB))
+    '''
+    if check_sum() > 0:
+        ui.labe_control.setText(str(check_sum()))
+        text_edit()
+    else:
+        ui.labe_control.setText("Error write")
+    '''
 
 
 def main():
@@ -104,11 +110,11 @@ def main():
 
 
 
-ui.pushButton.clicked.connect(main)
+#ui.pushButton.clicked.connect(main)
 ui.clear.clicked.connect(clear_box)
 
 #ui.num.createStandardContextMenu()
-#ui.pushButton.clicked.connect(get)
+ui.pushButton.clicked.connect(ccc)
 
 
 ui.show()
