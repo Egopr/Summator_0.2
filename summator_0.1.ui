@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>430</width>
-    <height>514</height>
+    <width>405</width>
+    <height>506</height>
    </rect>
   </property>
   <property name="font">
@@ -114,7 +114,7 @@
      <rect>
       <x>10</x>
       <y>140</y>
-      <width>411</width>
+      <width>181</width>
       <height>321</height>
      </rect>
     </property>
@@ -287,13 +287,23 @@
      <string>Ручной</string>
     </property>
    </widget>
+   <widget class="QListView" name="listView">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>140</y>
+      <width>181</width>
+      <height>321</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>430</width>
+     <width>405</width>
      <height>21</height>
     </rect>
    </property>
