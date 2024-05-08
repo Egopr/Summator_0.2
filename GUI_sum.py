@@ -114,11 +114,11 @@ def main():
 
 
 
-#ui.pushButton.clicked.connect(main)
+ui.pushButton.clicked.connect(main)
 ui.clear.clicked.connect(clear_box)
 
 #ui.num.createStandardContextMenu()
-ui.pushButton.clicked.connect(ccc)
+#ui.pushButton.clicked.connect(ccc)
 
 
 ui.show()
