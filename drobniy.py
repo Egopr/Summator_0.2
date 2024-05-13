@@ -1,3 +1,4 @@
+import func_sum as fs
 def drob_num(cou, t_s):
     ishod = []
     num = t_s / cou
@@ -9,6 +10,14 @@ def drob_num(cou, t_s):
     itog = int(((t_s-k)*100)/cou)
     return itog
 
-print(drob_num(8, 303000))
+
+print(drob_num(7, 132))
+print(fs.zero_blur(1, 8))
+
+
+
+
+
+
 
 
