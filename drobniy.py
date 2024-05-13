@@ -1,6 +1,7 @@
 import func_sum as fs
 def drob_num(cou, t_s):
     ishod = []
+    sum_kop = 0
     num = t_s / cou
     for i in range(cou):
         ishod.append(int(num))
@@ -8,16 +9,18 @@ def drob_num(cou, t_s):
     for i in ishod:
         k += i
     itog = int(((t_s-k)*100)/cou)
-    return itog
+    for i in range(cou):
+        sum_kop += itog
+    return sum_kop
 
 
-print(drob_num(7, 132))
-print(fs.zero_blur(1, 8))
+def sliyanie(cel, drob):
+    mas = []
+    for i in range(len(cel)):
+        soe = cel[i] + (drob[i] / 100)
+        mas.append(soe)
+    return mas
 
 
-
-
-
-
-
-
+resalt = fs.soedinenie(5,132)
+print(resalt)

@@ -2,7 +2,7 @@ import random
 
 ''' Генерирует список с нулями длинной - 'n' '''
 def zero_list(n):
-    j=0
+    j = 0
     zero_l = [j for i in range(n)]
     return zero_l
 
@@ -63,6 +63,7 @@ def sum_blur():
 ''' Из суммы с количеством элементов делает значение для дробной части'''
 def drob_num(cou, t_s):
     ishod = []
+    sum_kop = 0
     num = t_s / cou
     for i in range(cou):
         ishod.append(int(num))
@@ -70,17 +71,25 @@ def drob_num(cou, t_s):
     for i in ishod:
         k += i
     itog = int(((t_s-k)*100)/cou)
+    for i in range(cou):
+        sum_kop += itog
+    return sum_kop
 
-    return itog
 
-
-''' Соединение целой и дробнйо части '''
-def soedinenie(cel, drob1):
+def sliyanie(cel, drob):
     mas = []
-    for i in cel:
-        soe = i+(drob1/100)
+    for i in range(len(cel)):
+        soe = cel[i] + (drob[i] / 100)
         mas.append(soe)
     return mas
+
+''' Соединение целой и дробнйо части '''
+def soedinenie(c, t):
+    kop = drob_num(c, t)
+    cel = auto_random_sum(c, t)
+    run_kop = auto_random_sum(c, kop)
+    full = sliyanie(cel, run_kop)
+    return full
 
 
 ''' Генерирует список с итоговой суммы 't', распределённый по - 'с' '''
@@ -91,8 +100,8 @@ def random_summ(c, t, r1, r2):
 
 
 def test_sum(s):
-    print (s)
-    t=0
+    print(s)
+    t = 0
     for i in s:
         t += i
         print(round(t, 2))
