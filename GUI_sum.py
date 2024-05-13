@@ -4,7 +4,7 @@ import func_sum as fs
 app = QtWidgets.QApplication([])
 #app.setStyle('Fusion') # 'Breeze', 'Oxygen', 'QtCurve', 'Windows', 'Fusion'
 ui = uic.loadUi('summator_0.1.ui')
-ui.setWindowTitle('Summator')
+ui.setWindowTitle('Adder v.0.2')
 
 
 def get_num():
@@ -89,7 +89,6 @@ def text_edit():
     ui.info.setText('Completed')
 
 
-
 def clear_box():
     ui.textEdit.clear()
     ui.info.setText('Clear')
@@ -102,7 +101,6 @@ def main():
         text_edit()
     else:
         ui.labe_control.setText("Error write")
-
 
 
 ui.pushButton.clicked.connect(main)
