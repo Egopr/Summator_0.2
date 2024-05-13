@@ -225,7 +225,7 @@
      <rect>
       <x>240</x>
       <y>200</y>
-      <width>101</width>
+      <width>111</width>
       <height>21</height>
      </rect>
     </property>
@@ -286,6 +286,11 @@
       <height>311</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
    </widget>
    <widget class="QRadioButton" name="rad_auto">
     <property name="geometry">
@@ -314,6 +319,48 @@
     </property>
     <property name="text">
      <string>Ручной</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sum_leb">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>320</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Sum</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>289</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Вся сумма</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

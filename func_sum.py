@@ -100,11 +100,11 @@ def random_summ(c, t, r1, r2):
 
 
 def test_sum(s):
-    print(s)
+    #print(s)
     t = 0
     for i in s:
         t += i
-        print(round(t, 2))
+        #print(round(t, 2))
     return t
 
 

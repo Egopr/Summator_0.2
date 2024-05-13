@@ -47,6 +47,11 @@ def check_sum():
         summ = round(get_sum()/get_num(), 2)
     return summ #частное для контроля ручного режима размытия случайного порядка
 
+def check_test():
+    soe = fs.soedinenie(get_num(), get_sum())
+    test = round(fs.test_sum(soe), 2)
+    return test
+
 
 def auto_rez():
     mas = fs.auto_random_sum(get_num(), get_sum())
@@ -77,11 +82,12 @@ def write_list():
 
 def text_edit():
     ui.textEdit.clear()
-    mass = fs.auto_random_sum(get_num(), get_sum())
+    mass = fs.soedinenie(get_num(), get_sum())
     str_mas = fs.str_mas(mass)
     for i in str_mas:
         ui.textEdit.append(i)
     ui.info.setText('Completed')
+
 
 
 def clear_box():
@@ -89,25 +95,10 @@ def clear_box():
     ui.info.setText('Clear')
 
 
-def ccc():
-
-
-    b = ui.rad_auto
-    print(b)
-    print(type(b))
-
-    '''
-    if check_sum() > 0:
-        ui.labe_control.setText(str(check_sum()))
-        text_edit()
-    else:
-        ui.labe_control.setText("Error write")
-    '''
-
-
 def main():
     if check_sum() > 0:
         ui.labe_control.setText(str(check_sum()))
+        ui.sum_leb.setText(str(check_test()))
         text_edit()
     else:
         ui.labe_control.setText("Error write")

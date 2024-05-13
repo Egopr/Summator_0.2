@@ -22,5 +22,7 @@ def sliyanie(cel, drob):
     return mas
 
 
-resalt = fs.soedinenie(5,132)
-print(resalt)
+resalt = fs.soedinenie(64,303000)
+#print(resalt)
+print(fs.test_sum(resalt))
+
